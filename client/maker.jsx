@@ -82,7 +82,7 @@ const PremiumButton = (props) => {
                 onClick={handlePurchaseFakeProfit}
                 className="purchaseButton"
             >
-                Purchase Fake Profit - Unlimited Books
+                
             </button>
         </div>
     );
@@ -147,11 +147,11 @@ const BookList = (props) => {
                 <img src="/assets/img/bookImage.png" alt="book image" className="bookImage" />
                 <h3 className="bookTitle">Title: {book.title}</h3>
                 <h3 className="bookAuthor">Author: {book.author}</h3>
-                <h3 className="bookPages">Pages: {book.pages}</h3>
+                <h3 className="bookPages">Pages: {book.page}</h3>
                 <h3 className="bookYear">Year: {book.year}</h3>
                 
                 <div className="readingProgress">
-                    <label htmlFor={`pages-${book._id}`}>Pages Read: {book.pagesRead} / {book.pages}</label>
+                    <label htmlFor={`pages-${book._id}`}>Pages Read: {book.pagesRead} / {book.page}</label>
                     <div className="progressBar">
                         <div className="progressFill" style={{width: `${progressPercent}%`}}></div>
                     </div>
@@ -159,9 +159,9 @@ const BookList = (props) => {
                         id={`pages-${book._id}`}
                         type="number" 
                         min="0" 
-                        max={book.pages}
+                        max={book.page}
                         value={book.pagesRead}
-                        onChange={(e) => updatePagesRead(book._id, parseInt(e.target.value), book.pages)}
+                        onChange={(e) => updatePagesRead(book._id, parseInt(e.target.value), book.page)}
                         className="pagesInput"
                     />
                 </div>
@@ -181,11 +181,8 @@ const App = () => {
     const [hasUnlimitedBooks, setHasUnlimitedBooks] = useState(false);
 
     useEffect(() => {
-        // Get current user's premium status from window or fetch it
         const checkPremiumStatus = async () => {
             try {
-                // Check if there's a way to get user data - alternatively check from session
-                // For now we'll rely on the button click to update
                 const premiumElement = document.querySelector('[data-has-unlimited]');
                 if (premiumElement) {
                     setHasUnlimitedBooks(premiumElement.dataset.hasUnlimited === 'true');
