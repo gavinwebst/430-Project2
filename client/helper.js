@@ -1,6 +1,6 @@
 const handleError = (message, isSuccess = false) => {
   document.getElementById('errorMessage').textContent = message;
-  const messageElement = document.getElementById('domoMessage');
+  const messageElement = document.getElementById('Message');
   messageElement.classList.remove('hidden');
   
   if (isSuccess) {
@@ -20,7 +20,7 @@ const sendPost = async (url, data, handler) => {
   });
 
   const result = await response.json();
-  document.getElementById('domoMessage').classList.add('hidden');
+  document.getElementById('Message').classList.add('hidden');
 
   if(result.redirect) {
     window.location = result.redirect;
@@ -36,7 +36,7 @@ const sendPost = async (url, data, handler) => {
 };
 
 const hideError = () => {
-    document.getElementById('domoMessage').classList.add('hidden');
+    document.getElementById('Message').classList.add('hidden');
 };
 
 module.exports = {

@@ -17,7 +17,7 @@ html, body {
 nav {
     width: 100%;
     height: 50px;
-    background-color: #55acee;
+    background-color: #7f14f2;
 }
 
 nav:nth-child(1) {
@@ -38,22 +38,22 @@ nav:nth-child(1) {
     text-decoration: none;
     padding: 5px;
     border-radius: 4px;
-    background-color: #55acee;
+    background-color: #e9ee55;
     transition: background-color 0.4s ease;
 }
 
 .navlink a:hover {
     transition: background-color 0.8s ease;
-    background-color: #66bdff;
+    background-color: #000000;
 }
 
 .bookForm {
-    border: 2px solid #338acc;
+    border: 2px solid #05090b;
     height: 35px;
     width: 700px;
     margin-top:0px;
     padding-top:10px;
-    background-color: #55acee;
+    background-color: #605ad4;
     border-bottom-right-radius: 4px;
     border-top-right-radius: 4px;
 }
@@ -118,9 +118,9 @@ nav:nth-child(1) {
     margin-top: 14px;
     font-size: 1.2em;
     width: 100px;
-    background-color: #55acee;
+    background-color: #cdee55;
     border-radius: 2px;
-    border-color: #66acee;
+    border-color: #d7ee66;
     padding: 3px 0px;
     color: white;
     text-decoration: none;
@@ -132,7 +132,7 @@ nav:nth-child(1) {
 
 .formSubmit:hover {
     transition: background-color 0.4s ease;
-    background-color: #338acc;
+    background-color: #b3cc33;
 }
 
 #user, #pass, #pass2 {
@@ -221,7 +221,7 @@ nav:nth-child(1) {
     background-color: #66bfff;
 }
 
-img.domoFace {
+img.bookImage {
     margin-left: 25px;
     margin-right: 10px;
     height: 50px;
@@ -318,7 +318,7 @@ h3.bookYear {
     font-weight: bold;
 }
 
-#domoMessage.success {
+#Message.success {
     background-color: #d4edda;
     border-color: #28a745;
     color: #155724;
