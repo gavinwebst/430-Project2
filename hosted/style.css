@@ -151,7 +151,7 @@ nav:nth-child(1) {
     display: none;
 }
 
-#domoMessage {
+#Message {
     top: 250px;
     width: 250px;
     height: 650px;
@@ -161,7 +161,7 @@ nav:nth-child(1) {
     overflow: hidden;
 }
 
-#domoMessage h3 {
+#Message h3 {
     width: 200px;
     position: absolute;
     top: 0px;
