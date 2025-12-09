@@ -1,6 +1,13 @@
-const handleError = (message) => {
+const handleError = (message, isSuccess = false) => {
   document.getElementById('errorMessage').textContent = message;
-  document.getElementById('domoMessage').classList.remove('hidden');
+  const messageElement = document.getElementById('domoMessage');
+  messageElement.classList.remove('hidden');
+  
+  if (isSuccess) {
+    messageElement.classList.add('success');
+  } else {
+    messageElement.classList.remove('success');
+  }
 };
 
 const sendPost = async (url, data, handler) => {

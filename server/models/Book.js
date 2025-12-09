@@ -20,6 +20,12 @@ const BookSchema = new mongoose.Schema({
         required: true,
         min: 0,
     },
+    pagesRead: {
+        type: Number,
+        required: false,
+        default: 0,
+        min: 0,
+    },
     year: {
         type: Number,
         required: true,
@@ -40,7 +46,8 @@ BookSchema.statics.toAPI = (doc) => ({
     title: doc.title,
     author: doc.author,
     pages: doc.pages,
-    year: doc.years,
+    pagesRead: doc.pagesRead,
+    year: doc.year,
 });
 
 const BookModel = mongoose.model('Book', BookSchema);

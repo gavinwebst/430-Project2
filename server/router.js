@@ -13,6 +13,8 @@ const router = (app) => {
 
   app.get('/maker', mid.requiresLogin, controllers.Book.makerPage);
   app.post('/maker', mid.requiresLogin, controllers.Book.makeBook);
+  app.post('/purchaseFakeProfit', mid.requiresLogin, controllers.Book.purchakeFakeProfit);
+  app.post('/updatePagesRead', mid.requiresLogin, controllers.Book.updatePagesRead);
 
   app.get('/', mid.requiresSecure, mid.requiresLogout, controllers.Account.loginPage);
 };
